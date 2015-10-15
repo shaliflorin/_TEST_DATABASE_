@@ -1,0 +1,17 @@
+body {
+  border: 1px solid black;
+  text-align: center;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#bodycontent{
+  border: 1px solid #00B7FF;
+  text-align: center;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  min-height: 800px;
+}
+

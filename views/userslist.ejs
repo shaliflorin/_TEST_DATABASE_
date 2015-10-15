@@ -1,0 +1,42 @@
+<% layout('layout') -%>
+
+
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<p> <%= accounts[0].username %> </p>
+
+<h2> Proprieties of an element:
+        <%        var props = Object.keys(accounts[0].schema.paths);
+                  for (i=0; i<props.length; i++)
+                  {%>
+                        <span>  <%= props[i] %> | </span>
+                  <%}%>
+</h2>
+
+<%  for (account in accounts){ %>
+
+                <div style="
+                        border: 1px solid gray;
+                        margin: 10px;
+                        padding: 10px;
+                        display: inline-block">
+                        <div    style=" background-color: gray;
+                                        color: white;
+                                        margin: 0 0 10px 0">
+                        <%= account%>
+                        </div>
+                        <% for (i=0; i<props.length; i++){ %>
+                                        <span style="color:red"> <%= i %>: </span>
+                                        <span style="color:blue"> <%= props[i] %>   </span>
+                                        <span style="color:black"> <%= accounts[account][props[i]] %> </span>
+                                        </br>
+                        <% } %>
+                </div>
+
+        <% } %>
+
+
+
+
+
